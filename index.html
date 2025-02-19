@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review CSS</title>
+    <link rel="shortcut icon" href="./assets/img/note-img.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+    <h1 class="day_count">16/02 (30-36)</h1>
+    <div>
+        <h1 class="title">Priority</h1>
+        <ol>
+            <li>Internal & External</li>
+            <li>Inline(style) - 1000</li>
+            <li>#id - 100</li>
+            <li>.class - 10</li>
+            <li>tag - 1</li>
+            <li>Equal sqecificity(css giống nhau thì ưu tiên mới hơn)</li>
+            <li>Universal selector and inherited (*, html) - 0</li>
+        </ol>
+        <h3>Tổng kết thứ tự ưu tiên: important > style > id > class > tag > Universal selector and inherited</h3>
+    </div>
+    <div>
+        <h1 class="title">CSS Variable</h1>
+        <h5>Global variable</h5>
+        <h6>Set up:</h6>
+        <pre>
+            :root{
+                --text-color: red;
+            }
+        </pre>
+        <h6>Used:</h6>
+        <pre>
+            h1{
+                color: <span style="color: orange;">var</span>(--text-color);
+            }
+        </pre>
+        <h5>Local variale</h5>
+        <h6>Set up & Used</h6>
+        <pre>
+            .content{
+                --text-color: <span style="color: red;">red</span>;
+                color: <span style="color: orange;">var</span>(--text-color);
+            }
+        </pre>
+    </div>
+    <div>
+        <h1 class="title">CSS units</h1>
+        <h3>Absolute units(Gía trị tuyệt đối)</h3>
+        <ul>
+            <li>px</li>
+            <li>pt</li>
+            <li>cm</li>
+            <li>mm</li>
+            <li>inch</li>
+            <li>pc</li>
+        </ul>
+        <h3>Relative units(Gía trị tương đối)</h3>
+        <ul>
+            <li>% (phụ thuộc vào thẻ chứa nó)</li>
+            <li>rem (phụ thuộc vào thẻ html)</li>
+            <li>em (phụ thuộc vào thẻ gần nhất có giá trị)</li>
+            <li>vw (phụ thuộc vào kích thước chiều ngang của trình duyệt)</li>
+            <li>vh (phụ thuộc vào kích thước chiều cao của trình duyệt)</li>
+            <li>vmin</li>
+            <li>vmax</li>
+            <li>ex</li>
+            <li>ch</li>
+        </ul>
+    </div>
+
+    <h1 class="day_count">16/02 (37-59)</h1>
+    <div>
+        <h3 class="note">*Note:</h3>
+        <pre>
+            Khi dùng đơn vị rem nên quy đổi kích thước mặc định của trình duyệt
+            Kích thước mặt định là: <b>16px</b> <b>=> 1rem = 16px</b>
+            html{
+                font-size: <b>62.5%</b>;
+            }
+        </pre>
+        <h3>=> mục đích là để đưa kích thức trình duyệt mặc định về 10px =>1rem = 10px</h3>
+    </div>
+    <div>
+        <h1 class="title">CSS functions</h1>
+        <ul>
+            <li>var()</li>
+            <li>linear-gradient()</li>
+            <li>rgba()</li>
+            <li>rgb()</li>
+            <li>calc()</li>
+            <li>attr()</li>
+        </ul>
+    </div>
+    <div>
+        <h1 class="title">CSS pseudo-classes(lớp giả trong CSS)</h1>
+        <h3 class="note">Dùng khi muốn select, tương tác</h3>
+        <ul>
+            <li>:root (tham chiếu đến thẻ html)</li>
+            <li class="hover-pseudo">:hover (rê chuột vào)</li>
+            <li class="active-pseudo">:active (nhấn giữ chuột)</li>
+            <li>:first-child (select con đầu)</li>
+            <li>:last-child (select con cuối)</li>
+        </ul>
+    </div>
+    <div>
+        <h1 class="title">CSS pseudo-elements(thẻ giả trong CSS)</h1>
+        <h3 class="note">Dùng khi muốn tạo thêm thẻ trong CSS mà ko cần thêm html</h3>
+        <ul>
+            <li>::before</li>
+            <li>::after</li>
+            <span class="note">1 thẻ chỉ có thể có 1 before và 1 after</span>
+            <span class="title">dùng before, after bắt buộc phải có 2 thuộc tính content: ""; display</span>
+            <li>::first-letter(select đến chữ cái đầu trong thẻ text và có thể làm to lên )</li>
+            <li>::first-line(select đến dòng đầu trong thẻ text)</li>
+            <li>::selection(tạo hiệu ứng lúc bôi đen thẻ nội dung)</li>
+        </ul>
+    </div>
+    <div>
+        <h1 class="title">Padding(Đệm)</h1>
+        <p>Là vùng đệm giữa text và border của 1 thẻ</p>
+    </div>
+    <div>
+        <h1 class="title">Border(Viền)</h1>
+        <h3 class="note">Cách thuộc tính hay dùng</h3>
+        <pre>
+            border-width: 10px;
+            border-top-width: 10px;
+            border-style: solid;
+            border-color: red;
+
+            <b>short-hand ====> border: 10px solid red;</b>
+        </pre>
+    </div>
+    <div>
+        <h1 class="title">Margin(Khoảng cách)</h1>
+    </div>
+    <div>
+        <h1 class="title">Box-sizing</h1>
+        <p>Khi dùng padding, border, margin thì kích thước chủ thể sẽ tăng lên</p>
+        <b>=> box-sizing: border-box;</b>
+        <h3>Sẽ giúp khấu trừ kích thước khi dùngpadding, border, margin đảm bảo kích thước ban đầu của chủ thể trong ngưỡng</h3>
+    </div>
+</body>
+</html>
