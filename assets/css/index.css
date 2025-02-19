@@ -1,5 +1,29 @@
+*{
+    padding: 0;
+    margin: 5px;
+    box-sizing: border-box;
+    line-height: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+html{
+    font-size: 20px;
+}
+
 .day_count{
-    color: red;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background: #0a64ff;
+}
+
+.note_area{
+    background: #faf6eb;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #0a64ff
 }
 
 .title{
