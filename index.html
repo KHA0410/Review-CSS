@@ -74,13 +74,13 @@
     <h1 class="day_count">16/02 (37-59)</h1>
     <div class="note_area">
         <h3 class="note">*Note:</h3>
-        <pre>
+        <p>
             Khi dùng đơn vị rem nên quy đổi kích thước mặc định của trình duyệt
             Kích thước mặt định là: <b>16px</b> <b>=> 1rem = 16px</b>
             html{
                 font-size: <b>62.5%</b>;
             }
-        </pre>
+        </p>
         <h3>=> mục đích là để đưa kích thức trình duyệt mặc định về 10px =>1rem = 10px</h3>
     </div>
     <div class="note_area">
@@ -125,14 +125,14 @@
     <div class="note_area">
         <h1 class="title">Border(Viền)</h1>
         <h3 class="note">Cách thuộc tính hay dùng</h3>
-        <pre>
+        <p>
             border-width: 10px;
             border-top-width: 10px;
             border-style: solid;
             border-color: red;
-
+            <br>
             <b>short-hand ====> border: 10px solid red;</b>
-        </pre>
+        </p>
     </div>
     <div class="note_area">
         <h1 class="title">Margin(Khoảng cách)</h1>
@@ -142,6 +142,30 @@
         <p>Khi dùng padding, border, margin thì kích thước chủ thể sẽ tăng lên</p>
         <b>=> box-sizing: border-box;</b>
         <h3>Sẽ giúp khấu trừ kích thước khi dùng spadding, border, margin đảm bảo kích thước ban đầu của chủ thể trong ngưỡng</h3>
+    </div>
+    <h1 class="day_count">23/02 (60-)</h1>
+    <div class="note_area">
+        <h1 class="title">Thuộc tính background-image</h1>
+        <p>
+            <b>background-image: url(); </b>-> có thể nối tiếp nhiều url để các hình chồng lên nhau url(), url(), ...
+            <br>
+            + Có thể kết hợp vs linear-gradiant() để tạo 1 lớp màu gradiant phủ lên hình <br>
+            <b>background-image: url(), liner-gradiant(90deg, màu chuyển, màu chuyển); </b>-> màu chuyển là rgba() để có độ trong suốt
+            <br>
+            Các thuộc tính khác khi đi cùng <br>
+            width: 100%; <br>
+            height: 100vh; <br>
+            background-image: url(); <br>
+            background-size: 100px; // set cho width còn height auto <br>
+            background-repeat: no-repeat; <br>
+        </p>
+    </div>
+    <div class="note_area">
+        <h1 class="title">Thuộc tính background-size với cover, contain</h1>
+        <p>
+            <b>contain</b>: kéo ảnh theo chiều ngang hoặc dọc có kích thước lớn hơn, không bị cắt xén ảnh <br>
+            <b>cover</b>: ảnh sẽ bị mất khúc và đảm bảo luôn full màn
+        </p>
     </div>
 </body>
 </html>
