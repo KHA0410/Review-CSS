@@ -167,7 +167,7 @@
             <b>cover</b>: ảnh sẽ bị mất khúc và đảm bảo luôn full màn
         </p>
     </div>
-    <h1 class="day_count">24/02 (64-)</h1>
+    <h1 class="day_count">24/02 (64-70)</h1>
     <div class="note_area">
         <h1 class="title">Thuộc tính background-origin</h1>
         Thuộc tính background-origin sẽ giúp đối tượng hình ảnh đổ từ border, padding, content <br>
@@ -189,6 +189,59 @@
             Viết tắt 4 thuộc tính background-image, backgound-repeat, background-position, background-size <br>
             <b>background: url() no-repeat center/contain</b><br>
             <u>Note:</u> no-repeat viết sau url và giữa bg-position và bg-size phải có dấu "/"
+        </p>
+    </div>
+    <h1 class="day_count">27/02 (71-78)</h1>
+    <div class="note_area">
+        <h1 class="title">Position (relative, absolute, fixed, sticky)</h1>
+        <h2>Relative(tương đối): lấy chính nó là góc tọa độ và có thể đè lên đối tượng khác</h2>
+        <p>CSS{<br>
+            <b>posiotion: relative;</b><br>
+            top: 100px;<br>
+            left: 100px;<br>
+        }
+        </p>
+        <h2>Absolute(tuyệt đối): phụ thuộc vào <b>thẻ cha</b> gần nhất có dùng thuộc tính <b>position</b></h2>
+        <h5>CSS</h5>
+        <p>
+            .cha{<br>
+                width: 500px;<br>
+                height: 400px;<br>
+                <b>position: relative; </b><i>//chỉ cần dùng posiotion là dc value gì cx dc </i><br>
+            }
+            <br>
+            .con{<br>
+                width: 100px;<br>
+                height: 100px;<br>
+                <b>position: absolute;</b><br>
+                top: 0;<br>
+                right: 0;<br>
+            }
+            <p><u><i>=>box con nằm trong bên phải ở trên box cha</i></u></p>
+        </p>
+        <h2>Fixed(dính): phụ thuộc vào cửa sổ trình duyệt, có thể ứng dụng thuộc tính này vào header, footer</h2>
+        <h5>CSS</h5>
+        <p>
+            header{<br>
+                width: 100%;<br>
+                height: 50px;<br>
+                color: red;<br>
+                <b>position: fixed;</b><br>
+                top: 0;<br>
+            }
+        </p>
+        <h5>=>Lúc này header sẽ nhấc lên và nổi lên trên thẻ bên dưới sẽ chiếm chỗ của header, nên thẻ bên dưới phải thêm margin-top</h5>
+        <h2>Sticky(bám dính): kết hợp vs scroll để tạo hiệu ứng sroll header dính top</h2>
+        <h5>CSS</h5>
+        <p>
+            header{
+                <br>
+                width: 100%;<br>
+                height: 50px;<br>
+                color: red;<br>
+                <b>position: sticky;</b><br>
+                top: 0;<br>
+            }
         </p>
     </div>
 </body>
